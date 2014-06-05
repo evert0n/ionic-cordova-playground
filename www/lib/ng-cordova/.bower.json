@@ -1,0 +1,14 @@
+{
+  "name": "ng-cordova",
+  "homepage": "https://github.com/driftyco/ng-cordova",
+  "version": "0.1.1-alpha",
+  "_release": "0.1.1-alpha",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.1-alpha",
+    "commit": "294f72e345f49b341ebdd4ea0d18a39bbed870fc"
+  },
+  "_source": "git@github.com:driftyco/ng-cordova.git",
+  "_target": "*",
+  "_originalSource": "git@github.com:driftyco/ng-cordova.git"
+}

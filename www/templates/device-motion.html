@@ -1,0 +1,35 @@
+<ion-view title="Device Motion">
+  <ion-content class="has-header">
+    <div class="text-center">
+      <div class="card" ng-if="err">
+        <div class="item item-text-wrap">
+          <p>{{err.message}}</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-text-wrap">
+          <p>Acceleration X</p>
+          <h3>{{acceleration.x}}</h3>
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-text-wrap">
+          <p>Acceleration Y</p>
+          <h3>{{acceleration.y}}</h3>
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-text-wrap">
+          <p>Acceleration Z</p>
+          <h3>{{acceleration.z}}</h3>
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-text-wrap">
+          <p>Timestamp</p>
+          <h3>{{acceleration.timestamp}}</h3>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

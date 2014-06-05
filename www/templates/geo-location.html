@@ -1,0 +1,23 @@
+<ion-view title="Geo location">
+  <ion-content class="has-header">
+    <div class="text-center">
+      <div class="card" ng-if="err">
+        <div class="item item-text-wrap">
+          <p>{{err.message}}</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-text-wrap">
+          <p>Current Latitude</p>
+          <h3>{{position.coords.latitude}}</h3>
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-text-wrap">
+          <p>Current Longitude</p>
+          <h3>{{position.coords.longitude}}</h3>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,35 @@
+<ion-view title="Compass">
+  <ion-content class="has-header">
+    <div class="text-center">
+      <div class="card" ng-if="err">
+        <div class="item item-text-wrap">
+          <p>{{err.message}}</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-text-wrap">
+          <p>Magnetic Heading</p>
+          <h3>{{position.magneticHeading}}</h3>
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-text-wrap">
+          <p>True Heading</p>
+          <h3>{{position.trueHeading || 'N/A'}}</h3>
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-text-wrap">
+          <p>Head Accuracy</p>
+          <h3>{{position.headingAccuracy}}</h3>
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-text-wrap">
+          <p>Timestamp</p>
+          <h3>{{position.timestamp}}</h3>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
