@@ -3,7 +3,7 @@ angular.module('ngCordova.plugins', [
   'ngCordova.plugins.camera',
   'ngCordova.plugins.geolocation',
   'ngCordova.plugins.deviceOrientation',
-  'ngCordova.plugins.notification',
+  'ngCordova.plugins.dialogs',
   'ngCordova.plugins.vibration',
   'ngCordova.plugins.network',
   'ngCordova.plugins.device',
@@ -11,5 +11,14 @@ angular.module('ngCordova.plugins', [
   'ngCordova.plugins.splashscreen',
   'ngCordova.plugins.keyboard',
   'ngCordova.plugins.contacts',
-  'ngCordova.plugins.statusbar'
+  'ngCordova.plugins.statusbar',
+  'ngCordova.plugins.file',
+  'ngCordova.plugins.socialSharing',
+  'ngCordova.plugins.globalization',
+  'ngCordova.plugins.sqlite',
+  'ngCordova.plugins.ga',
+  'ngCordova.plugins.push',
+  'ngCordova.plugins.spinnerDialog',
+  'ngCordova.plugins.pinDialog',
+  'ngCordova.plugins.localNotification'
 ]);

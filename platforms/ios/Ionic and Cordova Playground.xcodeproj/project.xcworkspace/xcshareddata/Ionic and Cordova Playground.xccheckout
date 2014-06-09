@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>506DC784-56C5-4AD8-81DD-E9C768021D49</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Ionic and Cordova Playground</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BFF62F18-0464-429C-94A2-9F874F15128A</key>
+		<string>ssh://github.com/evert0n/ionic-cordova-playground.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>platforms/ios/Ionic and Cordova Playground.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BFF62F18-0464-429C-94A2-9F874F15128A</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/evert0n/ionic-cordova-playground.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BFF62F18-0464-429C-94A2-9F874F15128A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BFF62F18-0464-429C-94A2-9F874F15128A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ionic-cordova-playground</string>
+		</dict>
+	</array>
+</dict>
+</plist>

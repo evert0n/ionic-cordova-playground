@@ -3,14 +3,14 @@ angular.module('ngCordova.plugins.barcodeScanner', [])
 .factory('$cordovaBarcodeScanner', ['$q', function ($q) {
 
   return {
-    scan: function () {
+    scan: function (options) {
       var q = $q.defer();
 
       cordova.plugins.barcodeScanner.scan(function (result) {
         q.resolve(result);
       }, function (err) {
         q.reject(err);
-      }, options);
+      });
 
       return q.promise;
     },
