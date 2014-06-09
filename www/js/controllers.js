@@ -43,7 +43,7 @@ angular.module('starter.controllers', [])
   };
 
   $scope.cleanup = function() {
-
+    // @todo
   };
 
 })
@@ -69,16 +69,6 @@ angular.module('starter.controllers', [])
  */
 
 .controller('GeoLocationCtrl', function($scope, $cordovaGeolocation, $stateParams) {
-
-    $cordovaGeolocation.getCurrentPosition().then(
-      function(position) {
-        $scope.position = position;
-        $scope.err = undefined;
-      },
-      function(err) {
-        $scope.err = err;
-      }
-    );
 
     $cordovaGeolocation.watchPosition().then(
       function() {
@@ -123,9 +113,11 @@ angular.module('starter.controllers', [])
 .controller('CompassCtrl', function($scope, $cordovaDeviceOrientation, $stateParams) {
 
   $scope.load = function() {
+
     var options = {
       frequency: 1000
     };
+
     $cordovaDeviceOrientation.watchHeading(options).then(
       function() {
         // Not currently used
@@ -137,6 +129,7 @@ angular.module('starter.controllers', [])
         $scope.position = position;
       }
     );
+
   };
 
   $scope.load();
@@ -150,9 +143,11 @@ angular.module('starter.controllers', [])
 .controller('DeviceMotionCtrl', function($scope, $cordovaDeviceMotion, $stateParams) {
 
   $scope.load = function() {
+
     var options = {
       frequency: 1000
     };
+
     $cordovaDeviceMotion.watchAcceleration(options).then(
       function() {
         // noop
@@ -165,6 +160,7 @@ angular.module('starter.controllers', [])
         //$scope.err = undefined;
       }
     );
+
   };
 
   $scope.load();
@@ -217,10 +213,13 @@ angular.module('starter.controllers', [])
 .controller('SplashScreenCtrl', function($scope, $cordovaSplashscreen, $timeout, $stateParams) {
 
   $scope.show = function() {
+
     $cordovaSplashscreen.show();
+
     $timeout(function() {
-      $cordovaSplashscreen.hide();
+        $cordovaSplashscreen.hide();
     }, 1000);
+
   };
 
 })
