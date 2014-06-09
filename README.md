@@ -6,8 +6,10 @@ This is a Ionic and Cordova playground using ng-cordova API (www.ngcordova.com)
 Feel free to fork and play with it.
 
 
-Cordova Plugins you have to install to play with this app 
+Cordova Plugins
 ===
+
+Install all the plugins below to play with this app 
 
 ```
 

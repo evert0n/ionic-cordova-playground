@@ -86,11 +86,10 @@ angular.module('starter.controllers', [])
 .controller('BarcodeScannerCtrl', function($scope, $cordovaBarcodeScanner, $stateParams) {
 
   $scope.scan = function() {
-    $scope.err = 'clicked';
     $cordovaBarcodeScanner.scan().then(
       function(result) {
         $scope.barcode = result;
-        //$scope.err = undefined;
+        $scope.err = undefined;
       },
       function(err){
         $scope.err = err;
