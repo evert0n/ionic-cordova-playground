@@ -5,6 +5,50 @@ angular.module('starter.controllers', [])
  */
 
 .controller('AppCtrl', function($scope) {
+
+  $scope.plugins = [
+    {
+      name: 'Camera',
+      slug: 'camera'
+    },
+    {
+      name: 'Device',
+      slug: 'device'
+    },
+    {
+      name: 'Geo Location',
+      slug: 'geo-location'
+    },
+    {
+      name: 'Barcode Scanner',
+      slug: 'barcode-scanner'
+    },
+    {
+      name: 'Compass',
+      slug: 'compass'
+    },
+    {
+      name: 'Device Motion',
+      slug: 'device-motion'
+    },
+    {
+      name: 'Contacts',
+      slug: 'contacts'
+    },
+    {
+      name: 'Network',
+      slug: 'network'
+    },
+    {
+      name: 'Vibration',
+      slug: 'vibration'
+    },
+    {
+      name: 'Splash Screen',
+      slug: 'splash-screen'
+    }
+  ];
+
 })
 
 /**
@@ -23,11 +67,13 @@ angular.module('starter.controllers', [])
 
   $scope.takePhoto = function() {
 
+    // See all the possible Camera options from the Camera docs:
+    // https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md#cameraoptions
     var options = {
-        quality: 75,
-        targetWidth: 320,
-        targetHeight: 320,
-        saveToPhotoAlbum: false
+      quality: 100,
+      targetWidth: 320,
+      targetHeight: 320,
+      saveToPhotoAlbum: false
     };
 
     $cordovaCamera.getPicture(options).then(
@@ -41,7 +87,7 @@ angular.module('starter.controllers', [])
   };
 
   $scope.cleanup = function() {
-
+    // @todo
   };
 
 })
@@ -67,16 +113,6 @@ angular.module('starter.controllers', [])
  */
 
 .controller('GeoLocationCtrl', function($scope, $cordovaGeolocation, $stateParams) {
-
-    $cordovaGeolocation.getCurrentPosition().then(
-      function(position) {
-        $scope.position = position;
-        $scope.err = undefined;
-      },
-      function(err) {
-        $scope.err = err;
-      }
-    );
 
     $cordovaGeolocation.watchPosition().then(
       function() {
@@ -121,9 +157,11 @@ angular.module('starter.controllers', [])
 .controller('CompassCtrl', function($scope, $cordovaDeviceOrientation, $stateParams) {
 
   $scope.load = function() {
+
     var options = {
       frequency: 1000
     };
+
     $cordovaDeviceOrientation.watchHeading(options).then(
       function() {
         // Not currently used
@@ -135,6 +173,7 @@ angular.module('starter.controllers', [])
         $scope.position = position;
       }
     );
+
   };
 
   $scope.load();
@@ -148,9 +187,11 @@ angular.module('starter.controllers', [])
 .controller('DeviceMotionCtrl', function($scope, $cordovaDeviceMotion, $stateParams) {
 
   $scope.load = function() {
+
     var options = {
       frequency: 1000
     };
+
     $cordovaDeviceMotion.watchAcceleration(options).then(
       function() {
         // noop
@@ -163,6 +204,7 @@ angular.module('starter.controllers', [])
         //$scope.err = undefined;
       }
     );
+
   };
 
   $scope.load();
@@ -215,10 +257,13 @@ angular.module('starter.controllers', [])
 .controller('SplashScreenCtrl', function($scope, $cordovaSplashscreen, $timeout, $stateParams) {
 
   $scope.show = function() {
+
     $cordovaSplashscreen.show();
+
     $timeout(function() {
-      $cordovaSplashscreen.hide();
+        $cordovaSplashscreen.hide();
     }, 1000);
+
   };
 
 })

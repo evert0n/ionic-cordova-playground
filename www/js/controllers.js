@@ -5,6 +5,50 @@ angular.module('starter.controllers', [])
  */
 
 .controller('AppCtrl', function($scope) {
+
+  $scope.plugins = [
+    {
+      name: 'Camera',
+      slug: 'camera'
+    },
+    {
+      name: 'Device',
+      slug: 'device'
+    },
+    {
+      name: 'Geo Location',
+      slug: 'geo-location'
+    },
+    {
+      name: 'Barcode Scanner',
+      slug: 'barcode-scanner'
+    },
+    {
+      name: 'Compass',
+      slug: 'compass'
+    },
+    {
+      name: 'Device Motion',
+      slug: 'device-motion'
+    },
+    {
+      name: 'Contacts',
+      slug: 'contacts'
+    },
+    {
+      name: 'Network',
+      slug: 'network'
+    },
+    {
+      name: 'Vibration',
+      slug: 'vibration'
+    },
+    {
+      name: 'Splash Screen',
+      slug: 'splash-screen'
+    }
+  ];
+
 })
 
 /**

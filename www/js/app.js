@@ -31,99 +31,19 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
     .state('app.home', {
       url: '/home',
       views: {
-        'menuContent' :{
+        menuContent: {
           templateUrl: 'templates/home.html',
           controller: 'HomeCtrl'
         }
       }
     })
-    .state('app.camera', {
-      url: '/camera',
+    .state('app.plugin', {
+      url: '/plugin/:pluginSlug',
       views: {
-        'menuContent' :{
-          templateUrl: 'templates/camera.html',
-          controller: 'CameraCtrl'
-        }
-      }
-    })
-    .state('app.device', {
-      url: '/device',
-      views: {
-        'menuContent' :{
-          templateUrl: 'templates/device.html',
-          controller: 'DeviceCtrl'
-        }
-      }
-    })
-    .state('app.geoLocation', {
-      url: '/geo-location',
-      views: {
-        'menuContent' :{
-          templateUrl: 'templates/geo-location.html',
-          controller: 'GeoLocationCtrl'
-        }
-      }
-    })
-    .state('app.barcodeScanner', {
-      url: '/barcode-scanner',
-      views: {
-        'menuContent' :{
-          templateUrl: 'templates/barcode-scanner.html',
-          controller: 'BarcodeScannerCtrl'
-        }
-      }
-    })
-    .state('app.compass', {
-      url: '/compass',
-      views: {
-        'menuContent' :{
-          templateUrl: 'templates/compass.html',
-          controller: 'CompassCtrl'
-        }
-      }
-    })
-    .state('app.deviceMotion', {
-      url: '/device-motion',
-      views: {
-        'menuContent' :{
-          templateUrl: 'templates/device-motion.html',
-          controller: 'DeviceMotionCtrl'
-        }
-      }
-    })
-    .state('app.contacts', {
-      url: '/contacts',
-      views: {
-        'menuContent' :{
-          templateUrl: 'templates/contacts.html',
-          controller: 'ContactsCtrl'
-        }
-      }
-    })
-    .state('app.network', {
-      url: '/network',
-      views: {
-        'menuContent' :{
-          templateUrl: 'templates/network.html',
-          controller: 'NetworkCtrl'
-        }
-      }
-    })
-    .state('app.vibration', {
-      url: '/vibration',
-      views: {
-        'menuContent' :{
-          templateUrl: 'templates/vibration.html',
-          controller: 'VibrationCtrl'
-        }
-      }
-    })
-    .state('app.splashScreen', {
-      url: '/splash-screen',
-      views: {
-        'menuContent' :{
-          templateUrl: 'templates/splash-screen.html',
-          controller: 'SplashScreenCtrl'
+        menuContent: {
+          templateUrl: function(stateParams) {
+            return "templates/plugins/" + stateParams.pluginSlug + ".html";
+          }
         }
       }
     });

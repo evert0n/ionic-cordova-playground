@@ -1,34 +1,33 @@
-<ion-view title="Device">
+<ion-view title="Device Motion" ng-controller="DeviceMotionCtrl">
   <ion-content class="has-header">
     <div class="text-center">
-      <div class="card">
+      <div class="card" ng-if="err">
         <div class="item item-text-wrap">
-          <p>Cordova</p>
-          <h3>{{device.cordova}}</h3>
+          <p>{{err.message}}</p>
         </div>
       </div>
       <div class="card">
         <div class="item item-text-wrap">
-          <p>Model</p>
-          <h3>{{device.model}}</h3>
+          <p>Acceleration X</p>
+          <h3>{{acceleration.x}}</h3>
         </div>
       </div>
       <div class="card">
         <div class="item item-text-wrap">
-          <p>Platform</p>
-          <h3>{{device.platform}}</h3>
+          <p>Acceleration Y</p>
+          <h3>{{acceleration.y}}</h3>
         </div>
       </div>
       <div class="card">
         <div class="item item-text-wrap">
-          <p>UUID</p>
-          <h3>{{device.uuid}}</h3>
+          <p>Acceleration Z</p>
+          <h3>{{acceleration.z}}</h3>
         </div>
       </div>
       <div class="card">
         <div class="item item-text-wrap">
-          <p>Version</p>
-          <h3>{{device.version}}</h3>
+          <p>Timestamp</p>
+          <h3>{{acceleration.timestamp}}</h3>
         </div>
       </div>
     </div>
