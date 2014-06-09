@@ -1,5 +1,17 @@
 <ion-view title="Camera">
   <ion-content class="has-header">
-    <h1>Camera</h1>
+    <div class="card" ng-if="err">
+      <div class="item item-text-wrap">
+        <p>{{err.message}}</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="item item-text-wrap">
+        <img class="full-image" ng-src="{{photo}}">
+      </div>
+    </div>
+    <div class="padding">
+      <button class="button button-block button-positive" ng-click="takePhoto()">Take picture</button>
+    </div>
   </ion-content>
 </ion-view>

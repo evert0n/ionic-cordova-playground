@@ -19,10 +19,27 @@ angular.module('starter.controllers', [])
  * Camera
  */
 
-.controller('CameraCtrl', function($scope, $stateParams) {
+.controller('CameraCtrl', function($scope, $cordovaCamera, $stateParams) {
 
   $scope.takePhoto = function() {
 
+    // See all the possible Camera options from the Camera docs:
+    // https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md#cameraoptions
+    var options = {
+      quality: 100,
+      targetWidth: 320,
+      targetHeight: 320,
+      saveToPhotoAlbum: false
+    };
+
+    $cordovaCamera.getPicture(options).then(
+      function(image) {
+        $scope.photo = image;
+      },
+      function(err) {
+        $scope.err = err;
+      }
+    );
   };
 
   $scope.cleanup = function() {
@@ -109,13 +126,17 @@ angular.module('starter.controllers', [])
     var options = {
       frequency: 1000
     };
-    $cordovaDeviceOrientation.watchHeading(options).then(function() {
-      // Not currently used
-    }, function(err) {
-      $scope.err = err;
-    }, function(position) {
-      $scope.position = position;
-    });
+    $cordovaDeviceOrientation.watchHeading(options).then(
+      function() {
+        // Not currently used
+      },
+      function(err) {
+        $scope.err = err;
+      },
+      function(position) {
+        $scope.position = position;
+      }
+    );
   };
 
   $scope.load();
